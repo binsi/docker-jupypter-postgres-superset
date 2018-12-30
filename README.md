@@ -1,7 +1,11 @@
 # docker-jupypter-postgres-superset
-A quick-to-setup docker architecture for data scientists with jupyter, postgres and superset
+## A quick-to-setup docker architecture for data scientists with jupyter, postgres and superset
 
-If you want to start the docker environment (jupyter, postgres, superset):
+1. Munch the data in jupyter as you are used to
+2. Store your data in postgres
+3. Create dandy charts with superset, using the connection to your postgres database
+
+## If you want to start the docker environment (jupyter, postgres, superset):
 - in the same directory as the Dockerfile run $docker-compose up -d 
 - Get URL+token for jupyter from $docker-compose logs jupyter
 - Jupyter is running on port 8888, Superset on 8088 (credentials: admin/superset) and postgres on port 5432
