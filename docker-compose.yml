@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+    jupyter:
+        image: jupyter/scipy-notebook
+        ports:
+            - 8888:8888
+        volumes:
+            - ./:/home/jovyan/work
+    postgres:
+        image: postgres
+        ports:
+            - 5432:5432
+        volumes:
+            - pg_data:/var/lib/postgresql/data
+    superset:
+        image: tylerfowler/superset
+        ports:
+            - 8088:8088
+
+volumes:
+    pg_data:
